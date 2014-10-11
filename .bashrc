@@ -121,3 +121,4 @@ export PS1="$TITLEBAR\[\e[00;37m\][\[\e[0m\]\[\e[01;32m\]\u\[\e[0m\]\[\e[00;32m\
 
 alias py3="python3"
 alias ipy3="ipython3"
+alias ipyqt="ipython qtconsole"

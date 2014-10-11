@@ -1,6 +1,18 @@
-if $COLORTERM == 'gnome-terminal'
-    set t_Co=256
-endif
+set nocompatible
+filetype off
+
+" set runetime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+
+call vundle#end()
+filetype plugin indent on
+" Finish Vundle
+
+set t_Co=256
 
 set tabstop=8
 set expandtab
@@ -10,8 +22,7 @@ set autoindent
 set smartindent
 set number
 
-filetype plugin indent on
-
 color zenburn
 
 set mouse=a
+set linebreak
