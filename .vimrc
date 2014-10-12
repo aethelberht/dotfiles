@@ -22,6 +22,7 @@ set autoindent
 set smartindent
 set number
 
+set nojoinspaces
 color zenburn
 
 set mouse=a
