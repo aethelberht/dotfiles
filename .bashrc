@@ -113,12 +113,22 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Load git prompt
+source ~/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=1
+
 # shorten the stupid-long directory display
 # export PS1="\[\e]0;\u@\h: \W\a\]${debian_chroot:+($debian_chroot)}\u@\h:\W\$ "
 
 TITLEBAR="\[\e]0; \u@\h: \W\a\]"
-export PS1="$TITLEBAR\[\e[00;37m\][\[\e[0m\]\[\e[01;32m\]\u\[\e[0m\]\[\e[00;32m\]@\[\e[0m\]\[\e[01;32m\]\h\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[01;35m\]\W\[\e[0m\]\[\e[00;37m\]]\\$ \[\e[0m\]"
+export PS1="$TITLEBAR[\[\e[92m\]\u@\h\[\e[97m\]:\[\e[95m\]\W\[\e[93m\]$(__git_ps1 " (%s)")\[\e[0;37m\]] "
+# export PS1="$TITLEBAR[\[\e[0;32m\]\u\[\e[1;32m\]@\[\e[0;32m\]\h\[\e[0;37m\]:\[\e[0;35m\]\W\[\e[0;37m\] $(__git_ps1 "(%s)")] "
+
 
 alias py3="python3"
 alias ipy3="ipython3"
 alias ipyqt="ipython qtconsole"
+
+# Base16 shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL

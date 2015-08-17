@@ -4,15 +4,21 @@ filetype off
 " set runetime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'VundleVim/Vundle.vim'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 filetype plugin indent on
 " Finish Vundle
 
+" Syntax and Colors
+syntax enable
 set t_Co=256
+let base16colorspace=256
+colorscheme base16-default
+set background=dark
+" colorscheme base16-ocean
 
 set tabstop=8
 set expandtab
@@ -23,7 +29,8 @@ set smartindent
 set number
 
 set nojoinspaces
-color zenburn
+
+set encoding=utf8
 
 set mouse=a
 set linebreak
