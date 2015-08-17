@@ -121,11 +121,9 @@ GIT_PS1_SHOWDIRTYSTATE=1
 # export PS1="\[\e]0;\u@\h: \W\a\]${debian_chroot:+($debian_chroot)}\u@\h:\W\$ "
 
 TITLEBAR="\[\e]0; \u@\h: \W\a\]"
-# export PS1='$(__git_ps1 " (%s)")'
-export PS1='[\[\e[92m\]\u@\h\[\e[37m\]:\[\e[95m\]\W\[\e[93m\]$(__git_ps1 " (%s)")\[\e[0;37m\]] '
-# export PS1="$TITLEBAR[\[\e[0;32m\]\u\[\e[1;32m\]@\[\e[0;32m\]\h\[\e[0;37m\]:\[\e[0;35m\]\W\[\e[0;37m\] $(__git_ps1 "(%s)")] "
+export PS1="${TITLEBAR}[\[\e[92m\]\u@\h\[\e[37m\]:\[\e[95m\]\W\[\e[93m\]\$(__git_ps1 ' (%s)')\[\e[0;37m\]] "
 
-
+# Some aliases
 alias py3="python3"
 alias ipy3="ipython3"
 alias ipyqt="ipython qtconsole"
