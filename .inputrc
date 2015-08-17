@@ -1,0 +1,5 @@
+# mintty ctrl+left/right, ctrl+delete/backspace binds
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[3;5~": kill-word
+"\C-_": backward-kill-word
