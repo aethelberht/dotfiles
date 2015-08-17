@@ -16,9 +16,8 @@ filetype plugin indent on
 syntax enable
 set t_Co=256
 let base16colorspace=256
-colorscheme base16-default
 set background=dark
-" colorscheme base16-ocean
+colorscheme base16-ocean
 
 set tabstop=8
 set expandtab
